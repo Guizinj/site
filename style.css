@@ -154,7 +154,6 @@
 
 /* Ajuste para telas maiores */
 @media (min-width: 768px) {
-    .hero { height: 100vh; }
     .info h2 { font-size: 70px; }
     .info p:last-child { max-width: 500px; font-size: 16px; }
 }
@@ -221,6 +220,7 @@
     aspect-ratio: 3/4; /* Formato clássico de moda */
     background-color: #f7f7f7;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .foto-produto img {
@@ -288,9 +288,9 @@
 }
 
 /* Ajuste para Desktop */
-@media (min-width: 900px) {
+@media (min-width: 768px) {
     .grid-produtos {
-        grid-template-columns: repeat(5, 1fr); /* 3 colunas no PC */
+        grid-template-columns: repeat(3, 1fr); /* 4 colunas no PC */
         gap: 40px;
     }
     
@@ -313,7 +313,7 @@
 
 /* --- SEÇÃO VINTAGE / CASUAL --- */
 .section-vintage {
-    padding: 100px 20px;
+    padding: 80px 20px;
     background-color: #FFF9F9; /* Um rosinha/creme quase branco */
 }
 
