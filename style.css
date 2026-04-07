@@ -492,9 +492,10 @@
 }
 
 .footer-bottom p {
-     font-family:
-    font-size: 9px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 8px;
     margin-bottom: 5px;
+    letter-spacing: 3px;
 }
 
 /* --- AJUSTE PC --- */
@@ -524,7 +525,7 @@
 /* --- SEÇÃO VESTIDOS (VERSÃO SUAVE) --- */
 .section-premium-dresses {
     padding: 80px 20px;
-    background-color: #F9F7F5; /* Cor areia bem clarinha, super chique */
+    background-color: #ffffff; /* Cor areia bem clarinha, super chique */
     color: #1a1a1a;
 }
 
