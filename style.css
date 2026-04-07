@@ -216,10 +216,10 @@
 
 .foto-produto {
     position: relative;
-    aspect-ratio: 3/4; /* Formato clássico de moda */
+    aspect-ratio: 1/1; /* Formato clássico de moda */
     background-color: #f7f7f7;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .foto-produto img {
@@ -252,9 +252,10 @@
 }
 
 .info-produto h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
+     font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 5px;
@@ -267,10 +268,10 @@
     margin-bottom: 15px;
 }
 
-.btn-comprar {
+.btn-comprar, .btn-dress {
     display: block;
     border: 1px solid #1a1a1a;
-    padding: 12px;
+    padding: 12px 21px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
@@ -279,9 +280,10 @@
     letter-spacing: 1px;
     color: #1a1a1a;
     transition: 0.3s;
+    cursor: pointer;
 }
 
-.btn-comprar:hover {
+.btn-comprar:hover, .btn-dress:hover {
     background-color: #1a1a1a;
     color: #fff;
 }
@@ -289,7 +291,7 @@
 /* Ajuste para Desktop */
 @media (min-width: 768px) {
     .grid-produtos {
-        grid-template-columns: repeat(3, 1fr); /* 4 colunas no PC */
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas no PC */
         gap: 40px;
     }
     
@@ -302,7 +304,7 @@
         flex-wrap: nowrap;
         align-items: center;
         justify-content: space-between;
-        padding: 30px 100px;
+        padding: 30px 60px;
     }
     .tittle-menu{
         font-size: 35px;
@@ -441,7 +443,8 @@
 
 /* --- FOOTER --- */
 .footer {
-    background-color: #fff;
+    background-color: #000000dc;
+    color: #fff;
     padding: 80px 20px 40px;
     border-top: 1px solid #eee;
     margin-top: 50px;
@@ -463,14 +466,12 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
-    color: #1a1a1a;
 }
 
 .footer-column a, .footer-column p {
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
-    color: #777;
     text-decoration: none;
     margin-bottom: 12px;
     letter-spacing: 1px;
@@ -491,17 +492,16 @@
 }
 
 .footer-bottom p {
+     font-family:
     font-size: 9px;
-    color: #bbb;
-    letter-spacing: 2px;
     margin-bottom: 5px;
 }
 
 /* --- AJUSTE PC --- */
 @media (min-width: 768px) {
     .footer-container {
-        grid-template-columns: repeat(4, 1fr); /* 4 colunas no PC */
-        text-align: left;
+        grid-template-columns: repeat(3, 1fr); /* 4 colunas no PC */
+        text-align: center;
     }
     
     .footer-form {
@@ -510,7 +510,127 @@
     
     .footer-bottom {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+    }
+}
+
+
+
+
+
+
+
+/* --- SEÇÃO VESTIDOS (VERSÃO SUAVE) --- */
+.section-premium-dresses {
+    padding: 80px 20px;
+    background-color: #F9F7F5; /* Cor areia bem clarinha, super chique */
+    color: #1a1a1a;
+}
+
+.container-dresses {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dresses-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.premium-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+}
+
+.premium-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; /* Diminuído para não agredir */
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.premium-title em {
+    font-style: italic;
+    color: #444;
+}
+
+/* Grid controlado */
+.dresses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha no celular */
+    gap: 20px;
+}
+
+.dress-img-box {
+    width: 100%;
+    aspect-ratio: 2/3; /* Formato mais vertical e elegante */
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+}
+
+.dress-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a foto preencher sem esticar */
+}
+.dress-img-box::before{
+     content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+}
+
+.dress-meta {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.dress-meta h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.dress-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.tag-esgotado {
+    position :absolute;
+    display: inline;
+    top: 12px;
+    right: 12px;
+    background: #000000;
+    color: #fff;
+    font-size: 8px;
+    padding: 6px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ajuste para Desktop (Fotos menores e alinhadas) */
+@media (min-width: 768px) {
+    .dresses-grid {
+        grid-template-columns: repeat(4, 1fr); /* 3 por linha no PC */
+        gap: 30px;
+    }
+    
+    .premium-title {
+        font-size: 42px;
     }
 }

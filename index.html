@@ -115,8 +115,8 @@
     <div class="container-vintage">
         <div class="vintage-intro">
             <span class="aesthetic-tag">Sweet & Vintage</span>
-            <h2 class="vintage-title">Graphic Tees Collection</h2>
-            <p class="vintage-desc">Estampas exclusivas: de cerejas a selos nostálgicos.</p>
+            <h2 class="vintage-title">Essência de Verão</h2>
+            <p class="vintage-desc">Estampas exclusivas</p>
         </div>
 
         <div class="vintage-grid">
@@ -155,16 +155,78 @@
             </div>
         </div>
     </div>
-</section
+</section>
+
+
+
+
+
+<section id="vestidos" class="section-premium-dresses">
+    <div class="container-dresses">
+        <div class="dresses-header">
+            <span class="premium-tag">Curadoria Exclusiva</span>
+            <h2 class="premium-title"><em>Premium Selection</em></h2>
+        </div>
+
+        <div class="dresses-grid">
+            <div class="dress-card">
+                <div class="dress-img-box">
+                    <img src="pandora.jpg" alt="Vestido Premium">
+                    <div class="tag-esgotado">Esgotado</div>
+                </div>
+                <div class="dress-meta">
+                    <h3>Vestido Pandora</h3>
+                    <p class="dress-price">R$ 149,90</p>
+                    <a class="btn-dress" onclick="Aviso()">INDISPONÍVEL</a>
+                </div>
+            </div>
+
+            <div class="dress-card">
+                <div class="dress-img-box">
+                    <img src="clarice.jpg" alt="Vestido Premium">
+                    <div class="tag-esgotado">Esgotado</div>
+                </div>
+                <div class="dress-meta">
+                    <h3>Vestido Clarice</h3>
+                    <p class="dress-price">R$79,90</p>
+                    <a class="btn-dress" onclick="Aviso()">INDISPONÍVEL</a>
+                </div>
+            </div>
+
+            <div class="dress-card">
+                <div class="dress-img-box">
+                    <img src="estela.jpg" alt="Vestido Premium">
+                    <div class="tag-esgotado">Esgotado</div>
+                </div>
+                <div class="dress-meta">
+                    <h3>Vestido Estela</h3>
+                    <p class="dress-price">R$ 99,90</p>
+                    <a class="btn-dress" onclick="Aviso()">INDISPONÍVEL</a>
+                </div>
+            </div>
+            <div class="dress-card">
+                <div class="dress-img-box">
+                    <img src="zara.jpg" alt="Vestido Premium">
+                    <div class="tag-esgotado">Esgotado</div>
+                </div>
+                <div class="dress-meta">
+                    <h3>Vestido Zara</h3>
+                    <p class="dress-price">R$ 109,90</p>
+                    <a class="btn-dress" onclick="Aviso()">INDISPONÍVEL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <footer class="footer">
     <div id="contato" class="footer-container">
         <div class="footer-column">
             <h4>Atendimento</h4>
-            <a href="https://wa.me/5581973258150" target="_blank">WhatsApp</a>
+            <a href="https://wa.me/5581973258150" target="_blank" style="color: white;">WhatsApp</a>
             <a>Guia de Tamanhos</a>
-            <a href="https://wa.me/5581973258150" target="_blank">Trocas e Devoluções</a>
+            <a href="https://wa.me/5581973258150" target="_blank" style="color: white;">Trocas e Devoluções</a>
         </div>
 
         <div class="footer-column">
@@ -176,7 +238,7 @@
 
         <div class="footer-column">
             <h4>Siga-nos</h4>
-            <a href="https://www.instagram.com/theclosetrb/" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/theclosetrb/" target="_blank" style="color: white;">Instagram</a>
             <a style="cursor: pointer;">Threads</a>
             <a style="cursor: pointer;">TikTok</a>
         </div>
@@ -209,6 +271,15 @@
     sr.reveal('.card-produto', { interval: 75 });
     sr.reveal('.vintage-intro', { delay: 100 });
     sr.reveal('.v-card', { interval: 75 });
+    sr.reveal('.section-premium-dresses', { delay: 200});
+
+    sr.reveal('.dress-card', { delay: 100, interval: 400 });
+
+
+    function Aviso(){
+        alert("Ops! Essa peça se encontra indisponível no momento!")
+    }
+    
 </script>
 </body>
 </html>
