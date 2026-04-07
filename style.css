@@ -443,7 +443,7 @@
 
 /* --- FOOTER --- */
 .footer {
-    background-color: #000000dc;
+    background-color: #000000e5;
     color: #fff;
     padding: 80px 20px 40px;
     border-top: 1px solid #eee;
@@ -564,7 +564,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 por linha no celular */
     gap: 20px;
-    filter: grayscale(70%);
 }
 
 .dress-img-box {
@@ -573,6 +572,7 @@
     overflow: hidden;
     background-color: #fff;
     position: relative;
+     filter: grayscale(70%);
 
 }
 
