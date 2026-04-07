@@ -564,6 +564,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 por linha no celular */
     gap: 20px;
+    filter: grayscale(70%);
 }
 
 .dress-img-box {
@@ -572,6 +573,7 @@
     overflow: hidden;
     background-color: #fff;
     position: relative;
+
 }
 
 .dress-img-box img {
