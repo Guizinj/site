@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina | Alimentação Saudável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="container-header">
+            <div class="logo">CANTINA</div>
+            <div class="user-actions">
+                <span>Olá, Comunidade!</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="filter-bar">
+        <div class="filter-scroll">
+            <button class="active" onclick="filtrar('todos')">Todos</button>
+            <button onclick="filtrar('salgado')">Salgados</button>
+            <button onclick="filtrar('doce')">Doces</button>
+            <button onclick="filtrar('bebida')">Bebidas</button>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="section-title">Nossos Clássicos</div>
+        
+        <div class="items-list">
+            <article class="item-card" data-categoria="salgado">
+                <div class="item-img">
+                    <img src="https://via.placeholder.com/150" alt="Coxinha">
+                </div>
+                <div class="item-info">
+                    <div class="text-content">
+                        <h3>Coxinha de Frango</h3>
+                        <p>5 unidades • Massa de batata artesanal</p>
+                    </div>
+                    <div class="item-price-action">
+                        <span class="price">R$ 15,90</span>
+                        <button class="add-btn" onclick="adicionar(15.90)">Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card" data-categoria="doce">
+                <div class="item-img">
+                    <img src="https://via.placeholder.com/150" alt="Bolo">
+                </div>
+                <div class="item-info">
+                    <div class="text-content">
+                        <h3>Bolo de Pote</h3>
+                        <p>200g • Chocolate belga com ninho</p>
+                    </div>
+                    <div class="item-price-action">
+                        <span class="price">R$ 12,00</span>
+                        <button class="add-btn" onclick="adicionar(12.00)">Adicionar</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div class="bottom-cart">
+        <div class="cart-wrapper">
+            <div class="total-label">
+                <p>Total do pedido</p>
+                <h2 id="valor-total">R$ 0,00</h2>
+            </div>
+            <button class="checkout-btn">Finalizar</button>
+        </div>
+    </div>
+
+    <script>
+        let totalPedido = 0;
+
+function adicionar(valor) {
+    totalPedido += valor;
+    
+    // Atualiza o valor na tela
+    const elementoTotal = document.getElementById('valor-total');
+    elementoTotal.innerText = totalPedido.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
+    
+    // Pequena animação de feedback (opcional)
+    elementoTotal.style.transform = "scale(1.1)";
+    setTimeout(() => { elementoTotal.style.transform = "scale(1)"; }, 100);
+}
+
+function limpar() {
+    totalPedido = 0;
+    document.getElementById('valor-total').innerText = "R$ 0,00";
+}
+
+function filtrar(categoria) {
+    const cards = document.querySelectorAll('.item-card');
+    const botoes = document.querySelectorAll('.filter-scroll button');
+
+    // 1. Lógica de esconder/mostrar
+    cards.forEach(card => {
+        if (categoria === 'todos' || card.getAttribute('data-categoria') === categoria) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+
+    // 2. Muda a cor do botão clicado para saber qual está ativo
+    botoes.forEach(btn => {
+        btn.classList.remove('active');
+        // Se o texto do botão contiver a categoria, ele fica ativo
+        if(btn.innerText.toLowerCase().includes(categoria) || (categoria === 'todos' && btn.innerText.includes('Todos'))) {
+            btn.classList.add('active');
+        }
+    });
+}
+    </script>
+</body>
+</html>
