@@ -371,15 +371,20 @@
 
     const hamburger = document.getElementById("hamburger");
     const menu = document.getElementById("menu");
+    const links = document.querySelectorAll(".menu a");
 
+    // abrir/fechar menu
     hamburger.addEventListener("click", () => {
         menu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+    });
 
-        if (menu.classList.contains("active")) {
-            hamburger.textContent = "✖";
-        } else {
-            hamburger.textContent = "☰";
-        }
+    // fechar ao clicar em link
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("active");
+            hamburger.classList.remove("active");
+        });
     });
 
 
