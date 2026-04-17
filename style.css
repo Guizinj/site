@@ -61,6 +61,58 @@
     color: #d4af37; 
 }
 
+
+
+
+
+/* BOTÃO HAMBURGUER */
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+
+/* MOBILE MENU LATERAL */
+@media (max-width: 768px) {
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -250px; /* escondido */
+        width: 250px;
+        height: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 20px;
+        gap: 20px;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .menu.active {
+        left: 0; /* aparece */
+        background-color: rgba(255, 255, 255, 0.945);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 10000;
+    }
+}
+
+
+
+
+
+
 .hero {
     position: relative;
     height: 80vh; 
@@ -68,7 +120,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('fundo-deitado.jpg') no-repeat bottom center;
+    background: url('imagens/fundo-deitado.jpg') no-repeat bottom center;
     background-size: cover;
     overflow: hidden;
 }
