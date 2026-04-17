@@ -373,7 +373,7 @@
     const menu = document.getElementById("menu");
     const links = document.querySelectorAll(".menu a");
 
-    // abrir/fechar no clique do botão
+    // abrir/fechar no botão
     hamburger.addEventListener("click", () => {
         menu.classList.toggle("active");
 
@@ -388,10 +388,20 @@
     links.forEach(link => {
         link.addEventListener("click", () => {
             menu.classList.remove("active");
-            hamburger.textContent = "☰"; // volta pro ícone normal
+            hamburger.textContent = "☰";
         });
     });
 
+    // 🔥 fechar ao clicar fora
+    document.addEventListener("click", (event) => {
+        const clicouDentroMenu = menu.contains(event.target);
+        const clicouNoBotao = hamburger.contains(event.target);
+
+        if (!clicouDentroMenu && !clicouNoBotao) {
+            menu.classList.remove("active");
+            hamburger.textContent = "☰";
+        }
+    });
 
 </script>
 

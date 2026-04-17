@@ -5,8 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Para a rolagem ser suave */
+    scroll-padding-top: 80px; /* Ajuste este valor para a altura exata do seu topo */
 }
+
 
 .container {
     text-align: center;
@@ -77,6 +79,20 @@
 
 /* MOBILE MENU LATERAL */
 @media (max-width: 768px) {
+
+    body {
+       padding-top: 80px; /* Altura aproximada do seu header */
+}
+
+
+    .container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
 
     .menu {
         position: fixed;
