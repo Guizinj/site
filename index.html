@@ -373,17 +373,22 @@
     const menu = document.getElementById("menu");
     const links = document.querySelectorAll(".menu a");
 
-    // abrir/fechar menu
+    // abrir/fechar no clique do botão
     hamburger.addEventListener("click", () => {
         menu.classList.toggle("active");
-        hamburger.classList.toggle("active");
+
+        if (menu.classList.contains("active")) {
+            hamburger.textContent = "✖";
+        } else {
+            hamburger.textContent = "☰";
+        }
     });
 
-    // fechar ao clicar em link
+    // fechar ao clicar nos links
     links.forEach(link => {
         link.addEventListener("click", () => {
             menu.classList.remove("active");
-            hamburger.classList.remove("active");
+            hamburger.textContent = "☰"; // volta pro ícone normal
         });
     });
 
