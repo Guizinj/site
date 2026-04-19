@@ -644,10 +644,10 @@
 
 .modal-img {
     position: fixed;
-    top: 100px;
-    left: 50px;
-    width: 80%;
-    height: 80%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
     background: rgba(0,0,0,0.9);
 
@@ -669,15 +669,16 @@
 
 .modal-img img {
     max-width: 90%;
-    max-height: 85%;
+    max-height: 80%;
     border-radius: 10px;
+    margin-top: 100px;
 }
 
 /* botão fechar */
 .fechar-modal {
     position: absolute;
-    top: 20px;
-    right: 25px;
+    top: 130px;
+    right: 45px;
     font-size: 30px;
     color: #fff;
     cursor: pointer;
