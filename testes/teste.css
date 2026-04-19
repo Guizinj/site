@@ -383,7 +383,7 @@
 
 
 
-.add-to-cart {
+.add-to-cart, .esgotado{
     width: 100%;
     padding: 15px;
     background: #1a1a1a;
@@ -399,7 +399,7 @@
     display: block;   /* Garante que ele apareça */
 }
 
-.add-to-cart:hover {
+.add-to-cart:hover, .esgotado {
     background: transparent;
     color: #1a1a1a;
 }
@@ -447,6 +447,9 @@
     color: #666;
     letter-spacing: 0.5px;
 }
+.parcelas-esgotado{
+    display: none;
+}
 
 
 @media (max-width: 768px) {
@@ -459,7 +462,7 @@
     .preco-novo { font-size: 15px; }
 
     /* Garanta que o botão apareça no mobile também */
-    .add-to-cart { 
+    .add-to-cart, .esgotado { 
         display: block !important; 
         padding: 10px !important;
         font-size: 10px !important;
