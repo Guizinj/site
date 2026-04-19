@@ -640,3 +640,47 @@
 #lista-carrinho::-webkit-scrollbar-thumb {
     background: #e0e0e0;
 }
+
+
+
+
+.modal-img {
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    width: 80%;
+    height: 80%;
+
+    background: rgba(0,0,0,0.9);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.modal-img.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-img img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 10px;
+}
+
+/* botão fechar */
+.fechar-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}

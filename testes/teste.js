@@ -209,3 +209,34 @@ if (btnLimpar) {
         }, 150);
     });
 }
+
+
+
+
+
+// --- MODAL DE IMAGEM ---
+const modal = document.getElementById('modal-img');
+const imgGrande = document.getElementById('img-grande');
+const fecharModal = document.querySelector('.fechar-modal');
+
+// abrir ao clicar na imagem do card
+document.querySelectorAll('.card-produto img').forEach(img => {
+    img.addEventListener('click', () => {
+        imgGrande.src = img.src;
+        modal.classList.add('active');
+    });
+});
+
+// fechar ao clicar no X
+if (fecharModal) {
+    fecharModal.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+}
+
+// fechar clicando fora da imagem
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('active');
+    }
+});
