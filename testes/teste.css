@@ -186,7 +186,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(#5a4b33be, #bea476de);
+    background: url(fotos/outono.jpg);
     background-size: cover;
     overflow: hidden;
 }
