@@ -304,6 +304,7 @@
 .sessao-titulo h2 {
     font-family: 'Playfair Display', serif;
     font-size: 32px;
+    letter-spacing: 3px;
     margin-top: 10px;
     color: #1a1a1a;
 }
