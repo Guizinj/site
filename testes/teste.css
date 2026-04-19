@@ -169,7 +169,7 @@
 
     .hamburger {
         display: block;
-        z-index: 10000000;
+        z-index: 10001;
     }
 
     nav > a{
