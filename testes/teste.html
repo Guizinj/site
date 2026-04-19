@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="teste.css">
+   <link rel="shortcut icon" href="fundo-removebg-preview.png" type="image/x-icon">
+    <title>The Closet RB</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="cart-icon-container" id="abrir-carrinho">
+                <span class="icon-cart">👜</span> 
+                <span id="cart-count">0</span>
+            </div>
+
+            <div class="logo">
+                <a href="#" class="tittle-menu">The Closet RB</a>
+                <p>MODESTA PREMIUM</p>
+            </div>
+            
+            <div class="hamburger" id="hamburger">☰</div>
+
+            <nav class="menu" id="menu">
+                <a href="#lancamentos">Lançamentos</a>
+                <a href="#brasil">T-Shirts Brasil</a>
+                <a href="#tshirts">T-Shirts</a>
+                <a href="#vestidos">Vestidos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+</header>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="promo">
+               <span>New Collection</span>
+           </div>
+            <div class="info">
+                <h2>Elegância que veste o Outono.</h2>
+                <p>Simplicidade premium para os dias de outono.</p>
+            </div>
+            <a href="#lancamentos">Confira o Lançamento</a>
+        </div>
+    </section>
+
+    <section class="container-produtos" id="lancamentos">
+    <div class="sessao-titulo">
+        <span>Atemporal & Premium</span>
+        <h2>Essênciais de Outono</h2>
+    </div>
+
+    <div class="grid-produtos">
+        
+        
+        <div class="card-produto">
+            <div class="card-imagem">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop" alt="Vestido Bege">
+            </div>  
+        <div class="card-info">
+            <h3>Vestido Midi Chocolate</h3>
+                <div class="precos">
+                    <span class="preco-antigo">R$ 399,90</span>
+                    <span class="preco-novo">R$ 289,90</span>
+                </div>
+            <p class="parcelas">10x de R$ 28,99</p>
+
+            <button class="add-to-cart" data-nome="Vestido Midi Chocolate" data-preco="289.90">
+            Adicionar à Sacola
+            </button>
+        </div>
+
+        </div>
+
+        <div class="card-produto">
+            <div class="card-imagem">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop" alt="Vestido Bege">
+            </div>  
+        <div class="card-info">
+            <h3>Vestido Midi Morango</h3>
+                <div class="precos">
+                    <span class="preco-antigo">R$ 399,90</span>
+                    <span class="preco-novo">R$ 199,90</span>
+                </div>
+            <p class="parcelas">10x de R$ 28,99</p>
+
+            <button class="add-to-cart" data-nome="Vestido Midi Morango" data-preco="199.90">
+            Adicionar à Sacola
+            </button>
+        </div>
+
+        </div>
+
+        <div class="card-produto">
+            <div class="card-imagem">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop" alt="Vestido Bege">
+            </div>  
+        <div class="card-info">
+            <h3>Vestido Amora</h3>
+                <div class="precos">
+                    <span class="preco-antigo">R$ 399,90</span>
+                    <span class="preco-novo">R$ 159,90</span>
+                </div>
+            <p class="parcelas">10x de R$ 28,99</p>
+
+            <button class="add-to-cart" data-nome="Vestido Amora" data-preco="159.90">
+            Adicionar à Sacola
+            </button>
+        </div>
+
+        </div>
+
+        <div class="card-produto">
+            <div class="card-imagem">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop" alt="Vestido Bege">
+            </div>  
+        <div class="card-info">
+            <h3>Vestido Baby</h3>
+                <div class="precos">
+                    <span class="preco-antigo">R$ 399,90</span>
+                    <span class="preco-novo">R$ 289,90</span>
+                </div>
+            <p class="parcelas">10x de R$ 28,99</p>
+
+            <button class="add-to-cart" data-nome="Vestido Baby" data-preco="99.90">
+            Adicionar à Sacola
+            </button>
+        </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div id="carrinho-sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2>Sua Sacola</h2>
+        <button id="fechar-carrinho">&times;</button>
+    </div>
+    
+    <ul id="lista-carrinho">
+        </ul>
+
+    <div class="sidebar-footer">
+        <div class="total-container">
+            <span>Total:</span>
+            <span id="total-valor">R$ 0,00</span>
+        </div>
+        <button id="finalizar-pedido">Finalizar Pedido via WhatsApp</button>
+    </div>
+</div>
+
+<div id="overlay"></div>
+
+
+
+<script src="teste.js"></script>
+
+</body>
+</html>
