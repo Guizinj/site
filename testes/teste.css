@@ -128,8 +128,6 @@
 }
 
 
-
-
 /* MOBILE MENU LATERAL */
 @media (max-width: 768px) {
 
@@ -188,7 +186,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(#5a4b33, #bea376);
+    background: linear-gradient(#5a4b33be, #bea476de);
     background-size: cover;
     overflow: hidden;
 }
@@ -245,7 +243,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     margin-bottom: 40px;
     max-width: 300px;
     margin-left: auto;
@@ -255,19 +253,19 @@
 /* Botão Estilo Minimalista */
 .hero-content a {
     display: inline-block;
-    background-color: #ffffffbe;
-    color: #1a1a1a;
+    background-color: #ffffff00;
+    color: #ffffff;
     padding: 18px 40px;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: all 0.3s ease;
-    border: 1px solid transparent;
+    border: 1px solid white;
 }
 
 .hero-content a:hover {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.63);
     color: #fff;
     border-color: #fff;
     backdrop-filter: blur(5px);
@@ -346,7 +344,7 @@
 
 .cores {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     margin: 10px 0px -10px 0px;
 }
 
