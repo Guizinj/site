@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     atualizarVisualCarrinho();
 
-    // --- LÓGICA DO MENU (Igual anterior) ---
+    // --- LÓGICA DO MENU ---
     if (hamburger && menu) {
         hamburger.addEventListener("click", (e) => {
             e.stopPropagation(); 
@@ -22,6 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
             hamburger.innerHTML = menu.classList.contains("active") ? "&times;" : "&#9776;";
         });
     }
+
+    // --- FECHAR AO CLICAR EM UM LINK DO MENU (NOVO) ---
+    const linksMenu = document.querySelectorAll(".menu a");
+    linksMenu.forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("active");
+            if (hamburger) hamburger.innerHTML = "&#9776;";
+        });
+    });
 
     // --- FECHAR AO CLICAR FORA ---
     document.addEventListener("click", (e) => {
@@ -47,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('fechar-carrinho').onclick = toggleCarrinho;
     }
 
-    // --- ADICIONAR AO CARRINHO (COM LÓGICA DE QUANTIDADE) ---
+    // --- ADICIONAR AO CARRINHO ---
     document.querySelectorAll('.add-to-cart').forEach(botao => {
         botao.onclick = () => {
             const card = botao.closest('.card-produto');
@@ -55,14 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const preco = parseFloat(botao.getAttribute('data-preco'));
             const img = card.querySelector('img').src; 
 
-            // VERIFICAÇÃO: O item já está no carrinho?
             const itemExistente = carrinho.find(item => item.nome === nome);
 
             if (itemExistente) {
-                // Se já existe, apenas aumenta a quantidade
                 itemExistente.quantidade += 1;
             } else {
-                // Se é novo, adiciona com quantidade 1
                 carrinho.push({ nome, preco, img, quantidade: 1 });
             }
             
@@ -74,7 +80,44 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     });
 
-    // --- FINALIZAR NO WHATSAPP (COM QUANTIDADES) ---
+
+
+    // --- TROCA DE COR (IMAGEM + NOME) ---
+document.querySelectorAll('.card-produto').forEach(card => {
+
+    const img = card.querySelector('.img-produto');
+    const nomeTitulo = card.querySelector('.nome-produto');
+    const botao = card.querySelector('.add-to-cart');
+
+    card.querySelectorAll('.cor').forEach(cor => {
+        cor.addEventListener('click', () => {
+
+            // troca imagem
+            const novaImg = cor.getAttribute('data-img');
+            img.src = novaImg;
+
+            // troca nome
+            const novoNome = cor.getAttribute('data-nome');
+            nomeTitulo.innerText = novoNome;
+
+            // atualiza botão (IMPORTANTE pro carrinho)
+            botao.setAttribute('data-nome', novoNome);
+
+            // efeito visual (bolinha ativa)
+            card.querySelectorAll('.cor').forEach(c => c.classList.remove('ativa'));
+            cor.classList.add('ativa');
+        });
+    });
+
+});
+
+
+
+
+
+
+
+    // --- FINALIZAR NO WHATSAPP ---
     const btnFinalizar = document.getElementById('finalizar-pedido');
     if (btnFinalizar) {
         btnFinalizar.onclick = () => {
@@ -86,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
             carrinho.forEach((item) => {
                 const subtotal = item.preco * item.quantidade;
                 mensagem += `*${item.quantidade}x* ${item.nome}\n`;
-                mensagem += `   Unit: R$ ${item.preco.toFixed(2)} | Sub: R$ ${subtotal.toFixed(2)}\n\n`;
+                mensagem += `   Unidade: R$ ${item.preco.toFixed(2)} | Sub-total: R$ ${subtotal.toFixed(2)}\n\n`;
             });
             
             const total = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
@@ -100,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// --- ATUALIZAÇÃO VISUAL (MOSTRANDO O "2x") ---
+// --- ATUALIZAÇÃO VISUAL ---
 function atualizarVisualCarrinho() {
     const listaCarrinho = document.getElementById('lista-carrinho');
     const totalValor = document.getElementById('total-valor');
@@ -142,3 +185,27 @@ window.removerUmItem = function(index) {
     salvarCarrinhoNoNavegador();
     atualizarVisualCarrinho();
 };
+
+const btnLimpar = document.getElementById('limpar-carrinho');
+
+if (btnLimpar) {
+    btnLimpar.addEventListener('click', () => {
+        if (carrinho.length === 0) return;
+
+        const lista = document.getElementById('lista-carrinho');
+
+        // micro animação
+        if (lista) {
+            lista.style.transition = "opacity 0.2s ease";
+            lista.style.opacity = "0.3";
+        }
+
+        setTimeout(() => {
+            carrinho = [];
+            salvarCarrinhoNoNavegador();
+            atualizarVisualCarrinho();
+
+            if (lista) lista.style.opacity = "1";
+        }, 150);
+    });
+}

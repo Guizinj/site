@@ -94,8 +94,11 @@
     z-index: 1001; /* Fica acima de quase tudo */
 }
 
-.icon-cart {
-    font-size: 24px;
+.fa-solid{
+    display: block;
+    font-size: 25px;
+    margin-top: 6px;
+
 }
 
 /* O contador (Bolinha sobreposta) */
@@ -339,6 +342,40 @@
     transform: scale(1.08);
 }
 
+
+
+.cores {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0px -10px 0px;
+}
+
+.cor {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    
+    transition: all 0.2s ease;
+}
+
+/* hover */
+.cor:hover {
+    transform: scale(1.2);
+}
+
+/* ativa */
+.cor.ativa {
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
 .add-to-cart {
     width: 100%;
     padding: 15px;
@@ -494,6 +531,35 @@
     font-weight: 700;
     cursor: pointer;
 }
+
+.btn-limpar {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+
+    background: transparent;
+    color: #1a1a1a;
+
+    border: 2px solid #1a1a1a;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+/* hover elegante */
+.btn-limpar:hover {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+/* clique */
+.btn-limpar:active {
+    transform: scale(0.97);
+}
+
 
 /* --- AJUSTE NO BOTÃO DO CARD --- */
 @media (max-width: 768px) {

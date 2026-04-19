@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="teste.css">
    <link rel="shortcut icon" href="fundo-removebg-preview.png" type="image/x-icon">
@@ -12,7 +13,7 @@
     <header class="header">
         <div class="container">
             <div class="cart-icon-container" id="abrir-carrinho">
-                <span class="icon-cart">👜</span> 
+                <i class="fa-solid fa-cart-shopping"></i>
                 <span id="cart-count">0</span>
             </div>
 
@@ -52,26 +53,99 @@
     </div>
 
     <div class="grid-produtos">
-        
-        
-        <div class="card-produto">
-            <div class="card-imagem">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop" alt="Vestido Bege">
-            </div>  
-        <div class="card-info">
-            <h3>Vestido Midi Chocolate</h3>
-                <div class="precos">
-                    <span class="preco-antigo">R$ 399,90</span>
-                    <span class="preco-novo">R$ 289,90</span>
-                </div>
-            <p class="parcelas">10x de R$ 28,99</p>
 
-            <button class="add-to-cart" data-nome="Vestido Midi Chocolate" data-preco="289.90">
+    <!-- CARD PRICNIPAL INÍCIO -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/verde editado.png" class="img-produto" alt="Vestido">
+    </div>  
+
+    <!-- CORES -->
+    <div class="cores">
+        <span class="cor ativa"
+            style="background: rgb(64, 156, 64);"
+            data-img="fotos/verde editado.png"
+            data-nome="Vestido Longo Verde"></span>
+
+        <span class="cor"
+            style="background: rgb(56, 126, 216);"
+            data-img="fotos/vestido azul.png"
+            data-nome="Vestido Longo Azul"></span>
+
+        <span class="cor"
+            style="background: #5a3e2b;"
+            data-img="fotos/vestido marrom.png"
+            data-nome="Vestido Longo Marrom"></span>
+    </div>
+
+    <div class="card-info">
+        <h3 class="nome-produto">Vestido Longo</h3>
+
+        <div class="precos">
+            <span class="preco-antigo">R$ 399,90</span>
+            <span class="preco-novo">R$ 129,90</span>
+        </div>
+
+        <p class="parcelas">12x de R$ 12,99</p>
+
+        <button class="add-to-cart"
+            data-nome="Vestido Longo"
+            data-preco="129.90">
             Adicionar à Sacola
-            </button>
+        </button>
+    </div>
+
+</div>
+<!-- CARD PRICNIPAL FIM -->
+
+
+
+<!-- PRÓXIMO CARD -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/vestido premium.png" class="img-produto" alt="Vestido">
+    </div>  
+
+    <!-- CORES -->
+    <div class="cores">
+        <span class="cor ativa"
+            style="background: rgb(161, 152, 109);"
+            data-img="fotos/vestido premium.png"
+            data-nome="Vestido Premium"></span>
+
+    </div>
+
+    <div class="card-info">
+        <h3 class="nome-produto">Vestido Premium</h3>
+
+        <div class="precos">
+            <span class="preco-antigo">R$ 399,90</span>
+            <span class="preco-novo">R$ 189,90</span>
         </div>
 
-        </div>
+        <p class="parcelas">12x de R$ 12,99</p>
+
+        <button class="add-to-cart"
+            data-nome="Vestido Premium"
+            data-preco="189.90">
+            Adicionar à Sacola
+        </button>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+      
 
         <div class="card-produto">
             <div class="card-imagem">
@@ -135,6 +209,16 @@
 </section>
 
 
+
+
+
+
+
+
+
+
+
+
 <div id="carrinho-sidebar" class="sidebar">
     <div class="sidebar-header">
         <h2>Sua Sacola</h2>
@@ -149,6 +233,7 @@
             <span>Total:</span>
             <span id="total-valor">R$ 0,00</span>
         </div>
+        <button id="limpar-carrinho" class="btn-limpar">Limpar sacola</button>
         <button id="finalizar-pedido">Finalizar Pedido via WhatsApp</button>
     </div>
 </div>
