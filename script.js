@@ -121,10 +121,15 @@ document.querySelectorAll('.card-produto').forEach(card => {
 if (btnFinalizar) {
     btnFinalizar.onclick = () => {
         if (typeof carrinho === 'undefined' || carrinho.length === 0) {
-            return alert("Sua sacola está vazia! \u2728"); // Código para ✨
+            return alert("Sua sacola está vazia! \u2728"); 
         }
 
-        // Usando códigos Unicode para garantir que o emoji apareça sem erro
+        // IDs Unicodes Corretos:
+        // \u2728 = Brilhos (✨)
+        // \ud83d\udcb0 = Saco de Dinheiro (💰)
+        // \ud83d\udcac = Balão de conversa (💬)
+        // \ud83d\udcb3 = Cartão de Crédito (💳)
+
         let mensagem = "\u2728 *NOVO PEDIDO - THE CLOSET RB* \u2728\n";
         mensagem += "------------------------------------------\n\n";
         mensagem += "Olá! Gostaria de finalizar a reserva das seguintes peças:\n\n";
@@ -134,15 +139,16 @@ if (btnFinalizar) {
             const qtd = Number(item.quantidade);
             const subtotal = preco * qtd;
 
-            mensagem += " \u{1F6CD}" + `*${item.nome}*\n`; // Código para 🛍️
-            mensagem += `*Qtd:* ${qtd}x | *Un:* R$ ${preco.toFixed(2)}\n`;
-            mensagem += `*Subtotal:* R$ ${subtotal.toFixed(2)}\n\n`;
+            // Usei um marcador de ponto elegante que funciona em todos os sistemas
+            mensagem += "\u25aa\ufe0f " + `*${item.nome}*\n`; 
+            mensagem += `  ${qtd}x de R$ ${preco.toFixed(2)}\n`;
+            mensagem += `  *Subtotal:* R$ ${subtotal.toFixed(2)}\n\n`;
         });
         
         const total = carrinho.reduce((acc, item) => acc + (Number(item.preco) * Number(item.quantidade)), 0);
         
         mensagem += "------------------------------------------\n";
-        mensagem += "\ud83d\udcb0 " + `*VALOR TOTAL: R$ ${total.toFixed(2)}*\n\n`; // Código para 💰
+        mensagem += "\ud83d\udcb3 " + `*VALOR TOTAL: R$ ${total.toFixed(2)}*\n\n`;
         mensagem += "Aguardo as instruções para o pagamento! \u2728";
 
         const numero = "5581973258150"; 
