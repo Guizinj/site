@@ -133,7 +133,7 @@ document.querySelectorAll('.card-produto').forEach(card => {
             });
             
             const total = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
-            mensagem += "-----------------------------------\n";
+            mensagem += "------------------------------------------\n";
             mensagem += `*TOTAL DO PEDIDO: R$ ${total.toFixed(2)}*\n\n`;
             mensagem += "Olá, Finalizei meu pedido! Podemos dar prosseguimento ao pagamento!";
 
