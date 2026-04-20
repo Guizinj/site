@@ -118,42 +118,39 @@ document.querySelectorAll('.card-produto').forEach(card => {
 
     const btnFinalizar = document.getElementById('finalizar-pedido');
 
-    if (btnFinalizar) {
-        btnFinalizar.onclick = () => {
-            // 1. Verificação de segurança: O carrinho existe e tem itens?
-            if (typeof carrinho === 'undefined' || carrinho.length === 0) {
-                return alert("Sua sacola de compras ainda está vazia. Que tal escolher algo incrível? ✨");
-            }
+if (btnFinalizar) {
+    btnFinalizar.onclick = () => {
+        if (typeof carrinho === 'undefined' || carrinho.length === 0) {
+            return alert("Sua sacola está vazia! \u2728"); // Código para ✨
+        }
 
-            // 2. Construção da Mensagem Premium
-            let mensagem = "✨ *NOVO PEDIDO - THE CLOSET RB* ✨\n";
-            mensagem += "━━━━━━━━━━━━━━━━━━━━━\n\n";
-            mensagem += "Olá! Gostaria de finalizar a reserva das seguintes peças:\n\n";
-            
-            carrinho.forEach((item) => {
-                const preco = Number(item.preco); // Garante que é número
-                const qtd = Number(item.quantidade);
-                const subtotal = preco * qtd;
+        // Usando códigos Unicode para garantir que o emoji apareça sem erro
+        let mensagem = "\u2728 *NOVO PEDIDO - THE CLOSET RB* \u2728\n";
+        mensagem += "------------------------------------------\n\n";
+        mensagem += "Olá! Gostaria de finalizar a reserva das seguintes peças:\n\n";
+        
+        carrinho.forEach((item) => {
+            const preco = Number(item.preco); 
+            const qtd = Number(item.quantidade);
+            const subtotal = preco * qtd;
 
-                mensagem += `🛍️ *${item.nome}*\n`;
-                mensagem += `   ${qtd} un. × R$ ${preco.toFixed(2)}\n`;
-                mensagem += `   *Subtotal:* R$ ${subtotal.toFixed(2)}\n\n`;
-            });
-            
-            const total = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
-            
-            mensagem += "━━━━━━━━━━━━━━━━━━━━━\n";
-            mensagem += `💰 *VALOR TOTAL: R$ ${total.toFixed(2)}*\n\n`;
-            mensagem += "Aguardo o link para pagamento e a confirmação do meu look! ✨";
+            mensagem += "\ud83d\udebd " + `*${item.nome}*\n`; // Código para 🛍️
+            mensagem += `*Qtd:* ${qtd}x | *Un:* R$ ${preco.toFixed(2)}\n`;
+            mensagem += `*Subtotal:* R$ ${subtotal.toFixed(2)}\n\n`;
+        });
+        
+        const total = carrinho.reduce((acc, item) => acc + (Number(item.preco) * Number(item.quantidade)), 0);
+        
+        mensagem += "------------------------------------------\n";
+        mensagem += "\ud83d\udcb0 " + `*VALOR TOTAL: R$ ${total.toFixed(2)}*\n\n`; // Código para 💰
+        mensagem += "Aguardo as instruções para o pagamento! \u2728";
 
-            // 3. Configuração do WhatsApp
-            const numero = "5581973258150"; 
-            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-            
-            // 4. Execução
-            window.open(url, '_blank');
-        };
-    }
+        const numero = "5581973258150"; 
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+        
+        window.open(url, '_blank');
+    };
+}
 });
 
 // --- ATUALIZAÇÃO VISUAL ---
