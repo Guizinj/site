@@ -3,308 +3,886 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-   <link rel="shortcut icon" href="fundo-removebg-preview.png" type="image/x-icon">
+   <link rel="shortcut icon" href="fotos/logofavi.jpg" type="image/x-icon">
     <title>The Closet RB</title>
 </head>
 <body>
     <header class="header">
         <div class="container">
+            <div class="cart-icon-container" id="abrir-carrinho">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+
             <div class="logo">
                 <a href="#" class="tittle-menu">The Closet RB</a>
                 <p>MODESTA PREMIUM</p>
             </div>
-
-            <div style="color: rgba(0, 0, 0, 0.815);" class="hamburger" id="hamburger">☰</div>
+            
+            <div class="hamburger" id="hamburger">☰</div>
 
             <nav class="menu" id="menu">
                 <a href="#lancamentos">Lançamentos</a>
-                 <a href="#brasil">T-Shirts Brasil</a>
+                <a href="#Bodys">Bodys</a>
+                <a href="#brasil">T-Shirts Brasil</a>
                 <a href="#tshirts">T-Shirts</a>
                 <a href="#vestidos">Vestidos</a>
                 <a href="#contato">Contato</a>
             </nav>
         </div>
-    </header>
+</header>
     <section class="hero">
         <div class="hero-content">
             <div class="promo">
-               <span>Novidades</span>
+               <span>New Collection</span>
            </div>
             <div class="info">
-                <p>New collection</p>
                 <h2>Elegância que veste o Outono.</h2>
-                <p>Simplicidade premium para os dias de outono.</p>
+                <p>Tons de outono, onde cada peça traduz presença, leveza e elegância.</p>
             </div>
             <a href="#lancamentos">Confira o Lançamento</a>
         </div>
     </section>
 
-    <section id="lancamentos" class="lancamento-brasil">
-    <div class="container-secao">
-        <header class="secao-header">
-            <span class="badge-new">New Arrival</span>
-            <h2 class="titulo-lancamento">Brazil Series — Edição Limitada</h2>
-            <p class="subtitulo-lancamento">Estampas exclusiva</p>
-        </header>
-        <div class="grid-produtos">
-            <div class="card-produto">
-                <div class="foto-produto">
-                    <img src="imagens/brasil.jpg" alt="T-shirt Brasil">
-                    <div class="tag-lancamento">Lançamento</div>
-                </div>
-                <div class="info-produto">
-                    <h3>T-Shirt Brasil Color</h3>
-                    <p class="preco">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank" class="btn-comprar">Consulte seu Tamanho!</a>
-                </div>
-            </div>
-
-            <div class="card-produto">
-                <div class="foto-produto">
-                    <img src="imagens/brasileira.jpg" alt="T-shirt Made in Brazil">
-                    <div class="tag-lancamento">Lançamento</div>
-                </div>
-                <div class="info-produto">
-                    <h3>T-Shirt Brasiliera</h3>
-                    <p class="preco">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank" class="btn-comprar">Consulte seu Tamanho!</a>
-                </div>
-            </div>
-
-            <div class="card-produto">
-                <div class="foto-produto">
-                    <img src="imagens/brazuca.jpg" alt="T-shirt Selo">
-                    <div class="tag-lancamento">Lançamento</div>
-                </div>
-                <div class="info-produto">
-                    <h3>T-Shirt Brazuca</h3>
-                    <p class="preco">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank" class="btn-comprar">Consulte seu Tamanho!</a>
-                </div>
-            </div>
-
-             <div class="card-produto">
-                <div class="foto-produto">
-                    <img src="imagens/caramelo.jpg" alt="T-shirt Brasilidades">
-                    <div class="tag-lancamento">Lançamento</div>
-                </div>
-                <div class="info-produto">
-                    <h3>T-Shirt Caramelo</h3>
-                    <p class="preco">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank"class="btn-comprar">Consulte seu Tamanho!</a>
-                </div>
-            </div>
-
-            <div class="card-produto">
-                <div class="foto-produto">
-                    <img src="imagens/Deus.jpg" alt="T-shirt Tropicana">
-                    <div class="tag-lancamento">Lançamento</div>
-                </div>
-                <div class="info-produto">
-                    <h3>T-Shirt Lado a Lado</h3>
-                    <p class="preco">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank"class="btn-comprar">Consulte seu Tamanho!</a>
-                </div>
-            </div>
-
-        </div>
+    <section class="container-produtos" id="lancamentos">
+    <div class="sessao-titulo">
+        <h2>Edição Outono</h2>
+        <span>Atemporal & Premium</span>
     </div>
+
+    <div class="grid-produtos">
+
+    <!-- CARD PRICNIPAL INÍCIO (1)-->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/verde editado.png" class="img-produto" alt="Vestido">
+    </div>  
+
+    <!-- CORES -->
+    <div class="cores">
+        <span class="cor ativa"
+            style="background: rgb(64, 156, 64);"
+            data-img="fotos/verde editado.png"
+            data-nome="Vestido Marina Verde"></span>
+
+        <span class="cor"
+            style="background: rgb(56, 126, 216);"
+            data-img="fotos/vestido azul.png"
+            data-nome="Vestido Marina Azul"></span>
+
+        <span class="cor"
+            style="background: #856048;"
+            data-img="fotos/vestido marrom.png"
+            data-nome="Vestido Marina Marrom"></span>
+    </div>
+
+    <div class="card-info">
+        <h3 class="nome-produto">Vestido Marina Verde</h3>
+
+        <div class="precos">
+            <span class="preco-antigo">R$ 399,90</span>
+            <span class="preco-novo">R$ 129,90</span>
+        </div>
+
+        <p class="parcelas">12x de R$ 12,99</p>
+
+        <button class="add-to-cart"
+            data-nome="Vestido Marina Verde"
+            data-preco="129.90">
+            Adicionar à Sacola
+        </button>
+    </div>
+
+</div>
+<!-- FIM DO CARD (1) -->
+
+
+
+<!-- PRÓXIMO CARD (2) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/vestido premium.png" class="img-produto" alt="Vestido">
+    </div>  
+
+    <!-- CORES -->
+    <div class="cores">
+        <span class="cor ativa"
+            style="background: rgb(202, 189, 144);"
+            data-img="fotos/vestido premium.png"
+            data-nome="Vestido Catarina"></span>
+    </div>
+
+    <div class="card-info">
+        <h3 class="nome-produto">Vestido Catarina</h3>
+
+        <div class="precos">
+            <span class="preco-antigo">R$ 399,90</span>
+            <span class="preco-novo">R$ 189,90</span>
+        </div>
+
+        <p class="parcelas">12x de R$ 18,99</p>
+
+        <button class="add-to-cart"
+            data-nome="Vestido Catarina"
+            data-preco="189.90">
+            Adicionar à Sacola
+        </button>
+    </div>
+
+</div>
+<!-- FIM DO CARD (2) -->
+
+
+<!-- PRÓXIMO CARD (3) -->
+
+<div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/vestido laura m.png" class="img-produto" alt="Vestido">
+    </div>  
+
+    <!-- CORES -->
+    <div class="cores">
+        <span class="cor ativa"
+            style="background: rgb(143, 65, 28);"
+            data-img="fotos/vestido laura m.png"
+            data-nome="Vestido Laura marrom"></span>
+
+            <span class="cor"
+            style="background: rgb(194, 192, 185);"
+            data-img="fotos/vestido laura off.jpg"
+            data-nome="Vestido Laura off"></span>
+
+    </div>
+
+    <div class="card-info">
+        <h3 class="nome-produto">Vestido Laura Marrom</h3>
+
+        <div class="precos">
+            <span class="preco-antigo">R$ 399,90</span>
+            <span class="preco-novo">R$ 149,90</span>
+        </div>
+
+        <p class="parcelas">12x de R$ 14,99</p>
+
+        <button class="add-to-cart"
+            data-nome="Vestido Laura Marrom"
+            data-preco="149.90">
+            Adicionar à Sacola
+        </button>
+    </div>
+
+</div>
+<!-- FIM DO CARD (3) -->
+
+<!-- PRÓXIMO CARD (4) -->
+<div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/vestido priscila.png" class="img-produto" alt="Vestido">
+    </div>  
+
+    <!-- CORES -->
+    <div class="cores">
+        <span class="cor ativa"
+            style="background: rgb(14, 14, 14);"
+            data-img="fotos/vestido priscila.png"
+            data-nome="Vestido priscila"></span>
+
+    </div>
+
+    <div class="card-info">
+        <h3 class="nome-produto">Vestido Priscila</h3>
+
+        <div class="precos">
+            <span class="preco-antigo">R$ 399,90</span>
+            <span class="preco-novo">R$ 119,90</span>
+        </div>
+
+        <p class="parcelas">12x de R$ 11,99</p>
+
+        <button class="add-to-cart"
+            data-nome="Vestido priscila"
+            data-preco="119.90">
+            Adicionar à Sacola
+        </button>
+    </div>
+
+</div>
+<!-- FIM DO CARD (4) -->
+</div>
 </section>
 
+                            <!--FIM DA SEÇÃO OUTONO-->
 
 
 
-<section id="brasil" class="lancamento-brasil">
-    <div class="container-secao">
-        <header class="secao-header">
-            <span class="badge-new">Brazilian Model</span>
-            <h2 class="titulo-lancamento">Brazil Series — Brasilidades</h2>
-            <p class="subtitulo-lancamento">A leveza do algodão premium com a alma brasileira.</p>
-        </header>
+                            <!--SEÇÃO DE BODYS-->
 
-        <div class="grid-produtos">
-            <div class="card-produto">
-                <div class="foto-produto">
-                    <img src="imagens/made.jpg" alt="T-shirt Made in Brazil">
-                </div>
-                <div class="tag-lancamento">Mais Vendida</div>
-                <div class="info-produto">
-                    <h3>T-Shirt Made Brazil</h3>
-                    <p class="preco">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank" class="btn-comprar">Consulte seu Tamanho!</a>
-                </div>
+ <section class="container-produtos" id="Bodys">
+    <div class="sessao-titulo">
+        <h2>Bodys</h2>
+        <span>Lançamentos</span>
+    </div>
+
+    <div class="grid-produtos">
+
+
+        <!-- PRÓXIMO CARD (1) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/body Bella.jpg" class="img-produto" alt="Vestido">
+    </div>  
+
+    <div class="cores">
+        <span class="cor ativa"
+            style="background-color: rgb(109, 79, 55);"
+            data-img="fotos/body Bella.jpg"
+            data-nome="Body Bella Marrom"></span>
+
+            <span class="cor"
+            style="background-color: rgb(0, 0, 0);"
+            data-img="fotos/body Bella preto.png"
+            data-nome="Body Bella Preto"></span>
+
+    </div>
+
+        <div class="card-info">
+            <h3 class="nome-produto">Body Bella Marrom</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 89,90</span>
             </div>
 
-            <div class="card-produto">
-                <div class="foto-produto">
-                    <img src="imagens/brasil.jpg" alt="T-shirt Brasil">
-                </div>
-                <div class="info-produto">
-                    <h3>T-Shirt Brasil</h3>
-                    <p class="preco">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank" class="btn-comprar">Consulte seu Tamanho!</a>
-                </div>
-            </div>
+            <p class="parcelas">12x de R$ 8,99</p>
 
-            <div class="card-produto">
-                <div class="foto-produto">
-                    <img src="imagens/selo.jpg" alt="T-shirt Selo">
-                </div>
-                <div class="info-produto">
-                    <h3>T-Shirt Selo </h3>
-                    <p class="preco">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank" class="btn-comprar">Consulte seu Tamanho!</a>
-                </div>
-            </div>
-
-             <div class="card-produto">
-                <div class="foto-produto">
-                    <img src="imagens/brasilidades.jpg" alt="T-shirt Brasilidades">
-                </div>
-                <div class="info-produto">
-                    <h3>T-Shirt Brasilidades</h3>
-                    <p class="preco">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank"class="btn-comprar">Consulte seu Tamanho!</a>
-                </div>
-            </div>
-
-            <div class="card-produto">
-                <div class="foto-produto">
-                    <img src="imagens/tropicana.jpg" alt="T-shirt Tropicana">
-                </div>
-                <div class="info-produto">
-                    <h3>T-Shirt Tropicana</h3>
-                    <p class="preco">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank"class="btn-comprar">Consulte seu Tamanho!</a>
-                </div>
-            </div>
-
+            <button class="add-to-cart"
+                data-nome="Body Bella Marrom"
+                data-preco="89.90">
+                Adicionar á Sacola
+            </button>
         </div>
     </div>
-</section>
+<!-- FIM DO CARD (1) -->
 
+<!-- PRÓXIMO CARD (2) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/body Vallentim.jpg" class="img-produto" alt="Bodys">
+    </div>  
 
-<section id="tshirts" class="section-vintage">
-    <div class="container-vintage">
-        <div class="vintage-intro">
-            <span class="aesthetic-tag">Sweet & Vintage</span>
-            <h2 class="vintage-title">Essência de Verão</h2>
-            <p class="vintage-desc">Estampas exclusivas</p>
-        </div>
+    <div class="cores">
+        <span class="cor ativa"
+            style="background-color: rgb(109, 79, 55);"
+            data-img="fotos/body Vallentim.jpg"
+            data-nome="Body Vallentim Marrom"></span>
 
-        <div class="vintage-grid">
-            <div class="v-card">
-                <div class="v-img-box">
-                    <img src="imagens/cherry.jpg" alt="T-shirt Cerejas">
-                    <div class="v-overlay-tag">Mais Vendida</div>
-                </div>
-                <div class="v-meta">
-                    <h3>T-Shirt Cherry</h3>
-                    <p class="v-price">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank"class="v-btn">Consulte seu Tamanho!</a>
-                </div>
+            <span class="cor"
+            style="background-color: rgb(0, 0, 0);"
+            data-img="fotos/body Vallentim preto.png"
+            data-nome="Body Vallentim Preto"></span>
+
+    </div>
+
+        <div class="card-info">
+            <h3 class="nome-produto">Body Vallentim Marrom</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 69,90</span>
             </div>
 
-            <div class="v-card">
-                <div class="v-img-box">
-                    <img src="imagens/lagost.jpg" alt="T-shirt Lagosta">
-                </div>
-                <div class="v-meta">
-                    <h3>T-Shirt Lagosta</h3>
-                    <p class="v-price">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank"class="v-btn">Consulte seu Tamanho!</a>
-                </div>
-            </div>
+            <p class="parcelas">12x de R$ 6,99</p>
 
-            <div class="v-card">
-                <div class="v-img-box">
-                    <img src="imagens/ladolce.jpg" alt="T-shirt La Dolce Vita">
-                </div>
-                <div class="v-meta">
-                    <h3>T-Shirt La Dolce Vita</h3>
-                    <p class="v-price">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank"class="v-btn">Consulte seu Tamanho!</a>
-                </div>
-            </div>
-
-            <div class="v-card">
-                <div class="v-img-box">
-                    <img src="imagens/ladocevitar.jpg" alt="T-shirt La Dolce Vita">
-                </div>
-                <div class="v-meta">
-                    <h3>T-Shirt La Dolce Rose</h3>
-                    <p class="v-price">R$ 49,90</p>
-                    <a href="https://wa.me/5581973258150?text=Olá%20Rebeca!%20Gostaria%20de%20saber%20o%20tamanho%20de%20algumas%20peças%20do%20site." target="_blank"class="v-btn">Consulte seu Tamanho!</a>
-                </div>
-            </div>
-
+            <button class="add-to-cart"
+                data-nome="Body Vallentim Marrom"
+                data-preco="69.90">
+                Adicionar á Sacola
+            </button>
         </div>
     </div>
-</section>
+<!-- FIM DO CARD (2) -->
 
 
+<!-- PRÓXIMO CARD (3) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/body nina m.jpg" class="img-produto" alt="Bodys">
+    </div>  
 
+    <div class="cores">
+        <span class="cor ativa"
+            style="background-color: rgb(109, 79, 55);"
+            data-img="fotos/body nina m.jpg"
+            data-nome="Body Nina Marrom"></span>
 
+            <span class="cor"
+            style="background-color: rgb(197, 196, 196);"
+            data-img="fotos/body nina.jpg"
+            data-nome="Body Nina Branco"></span>
 
-<section id="vestidos" class="section-premium-dresses">
-    <div class="container-dresses">
-        <div class="dresses-header">
-            <span class="premium-tag">Curadoria Exclusiva</span>
-            <h2 class="premium-title"><em>Premium Selection</em></h2>
-        </div>
+    </div>
 
-        <div class="dresses-grid">
-            <div class="dress-card">
-                <div class="dress-img-box">
-                    <img src="imagens/pandora.jpg" alt="Vestido Premium">
-                    <div class="tag-esgotado">Esgotado</div>
-                </div>
-                <div class="dress-meta">
-                    <h3>Vestido Pandora</h3>
-                    <p class="dress-price">R$ 149,90</p>
-                    <a class="btn-dress" onclick="Aviso()">INDISPONÍVEL</a>
-                </div>
+        <div class="card-info">
+            <h3 class="nome-produto">Body Nina Marrom</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 69,90</span>
             </div>
 
-            <div class="dress-card">
-                <div class="dress-img-box">
-                    <img src="imagens/clarice.jpg" alt="Vestido Premium">
-                    <div class="tag-esgotado">Esgotado</div>
-                </div>
-                <div class="dress-meta">
-                    <h3>Vestido Clarice</h3>
-                    <p class="dress-price">R$79,90</p>
-                    <a class="btn-dress" onclick="Aviso()">INDISPONÍVEL</a>
-                </div>
-            </div>
+            <p class="parcelas">12x de R$ 6,99</p>
 
-            <div class="dress-card">
-                <div class="dress-img-box">
-                    <img src="imagens/estela.jpg" alt="Vestido Premium">
-                    <div class="tag-esgotado">Esgotado</div>
-                </div>
-                <div class="dress-meta">
-                    <h3>Vestido Estela</h3>
-                    <p class="dress-price">R$ 99,90</p>
-                    <a class="btn-dress" onclick="Aviso()">INDISPONÍVEL</a>
-                </div>
-            </div>
-            <div class="dress-card">
-                <div class="dress-img-box">
-                    <img src="imagens/zara.jpg" alt="Vestido Premium">
-                    <div class="tag-esgotado">Esgotado</div>
-                </div>
-                <div class="dress-meta">
-                    <h3>Vestido Zara</h3>
-                    <p class="dress-price">R$ 109,90</p>
-                    <a class="btn-dress" onclick="Aviso()">INDISPONÍVEL</a>
-                </div>
-            </div>
+            <button class="add-to-cart"
+                data-nome="Body Nina Marrom"
+                data-preco="69.90">
+                Adicionar á Sacola
+            </button>
         </div>
     </div>
+<!-- FIM DO CARD (3) -->
+</div>
+ </section>
+
+                              <!--FIM DA SEÇÃO DE BODYS-->
+
+
+
+
+
+                              <!--SEÇÃO DE T-SHIRTS BRASIL-->
+
+ <section class="container-produtos" id="brasil">
+    <div class="sessao-titulo">
+        <h2>T-Shirts</h2>
+        <span style="color: rgb(38, 112, 38);">Brazil Edition</span>
+    </div>
+
+    <div class="grid-produtos">
+
+
+        <!-- PRÓXIMO CARD (1) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/brasil.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-SHirt Brasil</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt Brasil"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (1) -->
+
+<!-- PRÓXIMO CARD (2) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/brazuca.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-Shirt Brazuca</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt Brazuca"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (2) -->
+
+
+<!-- PRÓXIMO CARD (3) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/made.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-Shirt Made in Brazil</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt Made in Brazil"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (3) -->
+
+
+<!-- PRÓXIMO CARD (4) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/tropicana.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-Shirt Tropicana</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt Tropicana"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (4) -->
+
+<!-- PRÓXIMO CARD (5) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/brasileira.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-SHirt Brasileira</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt Brasileira"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (5) -->
+
+<!-- PRÓXIMO CARD (6) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/brasilidades.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-Shirt Brasilidades</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt Brasilidades"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (6) -->
+
+
+<!-- PRÓXIMO CARD (7) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/selo.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-Shirt Selo</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt Selo"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (7) -->
+
+
+<!-- PRÓXIMO CARD (8) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/caramelo.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-Shirt Caramelo</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt Caramelo"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (8) -->
+</div>
+ </section>
+
+                              <!--FIM DA SEÇÃO DE T-SHIRTS BRASIL-->
+
+
+
+                                <!--SEÇÃO DE T-SHIRTS-->
+
+ <section class="container-produtos" id="brasil">
+    <div class="sessao-titulo">
+        <h2>T-Shirts</h2>
+        <span style="color: rgb(201, 62, 20);" >Sweet & Vintage</span>
+    </div>
+
+    <div class="grid-produtos">
+
+
+        <!-- PRÓXIMO CARD (1) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/cherry.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-SHirt Cherry</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt Cherry"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (1) -->
+
+<!-- PRÓXIMO CARD (2) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/lagost.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-Shirt Lagosta</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt Lagosta"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (2) -->
+
+
+<!-- PRÓXIMO CARD (3) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/ladolce.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-Shirt La Dolce Vita</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt La Dolce Vita"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (3) -->
+
+
+<!-- PRÓXIMO CARD (4) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem">
+        <img src="fotos/ladocevitar.jpg" class="img-produto" alt="t-shirt">
+    </div>  
+        <div class="card-info">
+            <h3 class="nome-produto">T-Shirt La Dolce Rose</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span class="preco-novo">R$ 49,90</span>
+            </div>
+
+            <p class="parcelas">em até 3x no cartão</p>
+
+            <button class="add-to-cart"
+                data-nome="T-Shirt La Dolce Vita Rose"
+                data-preco="49.90">
+                Adicionar á Sacola
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (4) -->
+
+
+</div>
+ </section>
+
+                              <!--FIM DA SEÇÃO DE T-SHIRTS-->
+
+
+
+
+
+
+                                  <!--SEÇÃO ESGOTADO-->
+
+<section class="container-produtos" id="vestidos">
+    <div class="sessao-titulo">
+        <h2>Premium Selection</h2>
+        <span>Estilo Modesto</span>
+    </div>
+
+    <div class="grid-produtos">
+
+
+    <!-- PRÓXIMO CARD (1) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem esgotado-img">
+        <img src="fotos/pandora.jpg" class="img-produto" alt="Vestido">
+    </div>  
+
+    <div class="cores">
+        <span class="cor ativa"
+            style="background: rgb(14, 14, 14);"
+            data-img="fotos/pandora.jpg"
+            data-nome="Vestido Pandora"></span>
+
+    </div>
+
+        <div class="card-info">
+            <h3 class="nome-produto">Vestido Pandora</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span style="color: rgba(0, 0, 0, 0.720);" class="preco-novo">R$ 179,90</span>
+            </div>
+
+            <p class="parcelas-esgotado">12x de R$ 11,99</p>
+
+            <button class="esgotado"
+                data-nome="Vestido priscila"
+                data-preco="119.90">
+                ESGOTADO
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (1) -->
+
+
+<!-- PRÓXIMO CARD (2) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem esgotado-img">
+        <img src="fotos/clarice.jpg" class="img-produto" alt="Vestido">
+    </div>  
+
+    <div class="cores">
+        <span class="cor ativa"
+            style="background: rgb(180, 142, 37);"
+            data-img="fotos/clarice.jpg"
+            data-nome="Vestido Clarice"></span>
+
+    </div>
+
+        <div class="card-info">
+            <h3 class="nome-produto">Vestido Clarice</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span style="color: rgba(0, 0, 0, 0.720);" class="preco-novo">R$ 99,90</span>
+            </div>
+
+            <p class="parcelas-esgotado">12x de R$ 9,99</p>
+
+            <button class="esgotado"
+                data-nome="Vestido Clarice"
+                data-preco="99.90">
+                ESGOTADO
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (2) -->
+
+
+<!-- PRÓXIMO CARD (3) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem esgotado-img">
+        <img src="fotos/estela.jpg" class="img-produto" alt="Vestido">
+    </div>  
+
+    <div class="cores">
+        <span class="cor ativa"
+            style="background: linear-gradient(to right, rgb(199, 134, 37), rgb(233, 233, 233));"
+            data-img="fotos/estela.jpg"
+            data-nome="Vestido Estela"></span>
+
+    </div>
+
+        <div class="card-info">
+            <h3 class="nome-produto">Vestido Estela</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span style="color: rgba(0, 0, 0, 0.720);" class="preco-novo">R$ 129,90</span>
+            </div>
+
+            <p class="parcelas-esgotado">12x de R$ 11,99</p>
+
+            <button class="esgotado"
+                data-nome="Vestido Estela"
+                data-preco="129.90">
+                ESGOTADO
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (3) -->
+
+
+<!-- PRÓXIMO CARD (4) -->
+    <div class="card-produto">
+    
+    <div class="card-imagem esgotado-img">
+        <img src="fotos/zara.jpg" class="img-produto" alt="Vestido">
+    </div>  
+
+    <div class="cores">
+        <span class="cor ativa"
+            style="background-color: black;"
+            data-img="fotos/zara.jpg"
+            data-nome="Vestido Zara"></span>
+
+    </div>
+
+        <div class="card-info">
+            <h3 class="nome-produto">Vestido Zara</h3>
+
+            <div class="precos">
+                <span class="preco-antigo">R$ 399,90</span>
+                <span style="color: rgba(0, 0, 0, 0.720);" class="preco-novo">R$ 119,90</span>
+            </div>
+
+            <p class="parcelas-esgotado">12x de R$ 11,99</p>
+
+            <button class="esgotado"
+                data-nome="Vestido Zara"
+                data-preco="119.90">
+                ESGOTADO
+            </button>
+        </div>
+    </div>
+<!-- FIM DO CARD (4) -->
+</div>
 </section>
+                             <!--FIM DA SEÇÃO ESGOTADO-->
+
+                                 
+
+                            <!--INÍCIO DO CARRINHO DE COMPRAS-->
+
+<div id="carrinho-sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2>Sua Sacola</h2>
+        <button id="fechar-carrinho">&times;</button>
+    </div>
+    
+    <ul id="lista-carrinho">
+        </ul>
+
+    <div class="sidebar-footer">
+        <div class="total-container">
+            <span>Total:</span>
+            <span id="total-valor">R$ 0,00</span>
+        </div>
+        <button id="limpar-carrinho" class="btn-limpar">Limpar sacola</button>
+        <button id="finalizar-pedido">Finalizar Pedido via WhatsApp</button>
+    </div>
+</div>
+<!--FIM DO CARRINHO DE COMPRAS-->
+
+
+
 
 
 <footer class="footer">
@@ -339,70 +917,16 @@
 </footer>
 
 
+
+
+
+
+<div id="overlay"></div>
+<div id="modal-img" class="modal-img">
+    <span class="fechar-modal">&times;</span>
+    <img id="img-grande" src="">
+</div>
+<script src="script.js"></script>
+
 </body>
-
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<script>
-    // Configuração base
-    const sr = ScrollReveal({
-        origin: 'bottom',
-        distance: '40px',
-        duration: 1300,
-        delay: 100,
-        reset: false // Mude para true se quiser que o efeito repita toda vez que subir/descer
-    });
-
-    // Aplicando aos elementos
-    sr.reveal('.hero-content', { delay: 100 });
-    sr.reveal('.secao-header', { interval: 75 });
-    sr.reveal('.card-produto', { interval: 75 });
-    sr.reveal('.vintage-intro', { delay: 100 });
-    sr.reveal('.v-card', { interval: 75 });
-    sr.reveal('.section-premium-dresses', { delay: 200});
-
-    sr.reveal('.dress-card', { delay: 100, interval: 250 });
-
-    function Aviso(){
-        alert("Ops! Essa peça se encontra indisponível no momento!")
-    }
-
-
-    const hamburger = document.getElementById("hamburger");
-    const menu = document.getElementById("menu");
-    const links = document.querySelectorAll(".menu a");
-
-    // abrir/fechar no botão
-    hamburger.addEventListener("click", () => {
-        menu.classList.toggle("active");
-
-        if (menu.classList.contains("active")) {
-            hamburger.textContent = "✖";
-        } else {
-            hamburger.textContent = "☰";
-        }
-    });
-
-    // fechar ao clicar nos links
-    links.forEach(link => {
-        link.addEventListener("click", () => {
-            menu.classList.remove("active");
-            hamburger.textContent = "☰";
-        });
-    });
-
-    // 🔥 fechar ao clicar fora
-    document.addEventListener("click", (event) => {
-        const clicouDentroMenu = menu.contains(event.target);
-        const clicouNoBotao = hamburger.contains(event.target);
-
-        if (!clicouDentroMenu && !clicouNoBotao) {
-            menu.classList.remove("active");
-            hamburger.textContent = "☰";
-        }
-    });
-
-</script>
-
-
 </html>
