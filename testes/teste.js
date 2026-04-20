@@ -134,7 +134,7 @@ if (btnFinalizar) {
             const qtd = Number(item.quantidade);
             const subtotal = preco * qtd;
 
-            mensagem += "\ud83d\udebd " + `*${item.nome}*\n`; // Código para 🛍️
+            mensagem += " \u{1F6CD}" + `*${item.nome}*\n`; // Código para 🛍️
             mensagem += `*Qtd:* ${qtd}x | *Un:* R$ ${preco.toFixed(2)}\n`;
             mensagem += `*Subtotal:* R$ ${subtotal.toFixed(2)}\n\n`;
         });
