@@ -113,32 +113,45 @@ document.querySelectorAll('.card-produto').forEach(card => {
 
 
 
-
-
-
-
     // --- FINALIZAR NO WHATSAPP ---
+
+
     const btnFinalizar = document.getElementById('finalizar-pedido');
+
     if (btnFinalizar) {
         btnFinalizar.onclick = () => {
-            if (carrinho.length === 0) return alert("Sua sacola está vazia!");
+            // 1. Verificação de segurança: O carrinho existe e tem itens?
+            if (typeof carrinho === 'undefined' || carrinho.length === 0) {
+                return alert("Sua sacola de compras ainda está vazia. Que tal escolher algo incrível? ✨");
+            }
 
-            let mensagem = "*SOLICITAÇÃO DE COMPRA - THE CLOSET RB*\n";
-            mensagem += "------------------------------------------\n\n";
+            // 2. Construção da Mensagem Premium
+            let mensagem = "✨ *NOVO PEDIDO - THE CLOSET RB* ✨\n";
+            mensagem += "━━━━━━━━━━━━━━━━━━━━━\n\n";
+            mensagem += "Olá! Gostaria de finalizar a reserva das seguintes peças:\n\n";
             
             carrinho.forEach((item) => {
-                const subtotal = item.preco * item.quantidade;
-                mensagem += `*${item.quantidade}x* ${item.nome}\n`;
-                mensagem += `   Unidade: R$ ${item.preco.toFixed(2)} | Sub-total: R$ ${subtotal.toFixed(2)}\n\n`;
+                const preco = Number(item.preco); // Garante que é número
+                const qtd = Number(item.quantidade);
+                const subtotal = preco * qtd;
+
+                mensagem += `🛍️ *${item.nome}*\n`;
+                mensagem += `   ${qtd} un. × R$ ${preco.toFixed(2)}\n`;
+                mensagem += `   *Subtotal:* R$ ${subtotal.toFixed(2)}\n\n`;
             });
             
             const total = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
-            mensagem += "------------------------------------------\n";
-            mensagem += `*TOTAL DO PEDIDO: R$ ${total.toFixed(2)}*\n\n`;
-            mensagem += "Olá, Finalizei meu pedido! Podemos dar prosseguimento ao pagamento!";
+            
+            mensagem += "━━━━━━━━━━━━━━━━━━━━━\n";
+            mensagem += `💰 *VALOR TOTAL: R$ ${total.toFixed(2)}*\n\n`;
+            mensagem += "Aguardo o link para pagamento e a confirmação do meu look! ✨";
 
+            // 3. Configuração do WhatsApp
             const numero = "5581973258150"; 
-            window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`, '_blank');
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+            
+            // 4. Execução
+            window.open(url, '_blank');
         };
     }
 });
