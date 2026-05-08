@@ -211,6 +211,231 @@
 }
 
 
+
+
+
+
+
+
+/* Hero do site */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url(fotos/outono.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.637));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    color: #fff;
+    width: 100%;
+    max-width: 600px;
+}
+
+.promo span {
+    background-color: #a38a63;
+    color: #000000;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 8px 20px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+/* Bloco de promoção */
+
+.promo-destaque {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.promo-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.35);
+    max-width: 60px;
+}
+
+.promo-centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.promo-label,
+.promo-sublabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin: 3px 0;
+    color: #fff;
+}
+
+.promo-numero {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 16vw, 80px);
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: -2px;
+}
+
+.promo-numero sup {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.25em;
+    font-weight: 700;
+    vertical-align: 0.6em;
+    opacity: 0.8;
+    letter-spacing: 0;
+}
+
+.promo-numero sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.18em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    vertical-align: baseline;
+    opacity: 0.8;
+    margin-left: 4px;
+}
+
+.promo-divisor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.promo-divisor span {
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #a38a63;
+}
+
+.promo-divisor i {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a38a63;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* Info */
+
+.info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.info p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botão */
+
+.hero-content a {
+    display: inline-block;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 18px 40px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border: 1px solid white;
+    text-decoration: none;
+}
+
+.hero-content a:hover {
+    background-color: rgba(0, 0, 0, 0.63);
+    color: #fff;
+    border-color: #fff;
+    backdrop-filter: blur(5px);
+}
+
+/* Validade da promoção */
+
+.promo-validade {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.4;
+    white-space: nowrap;
+    z-index: 2;
+    margin: 0;
+}
+
+/* Telas maiores */
+
+@media (min-width: 768px) {
+    .hero { height: 100vh; }
+    .info h2 { font-size: 70px; }
+    .info p { max-width: 500px; font-size: 16px; }
+    .promo-numero { font-size: 90px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .promo span {
     background-color: #a38a63; /* Verde Imperial */
     color: #000000; /* Dourado */
