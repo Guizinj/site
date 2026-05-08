@@ -447,11 +447,14 @@
 }
 
 .preco-antigo {
-    display: none; /* desativado por enquanto*/
+    /* desativado por enquanto*/
     font-size: 13px;
     color: #999;
     text-decoration: line-through;
     font-weight: 300;
+}
+.no{
+    display: none;
 }
 
 .preco-novo {
