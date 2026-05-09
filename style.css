@@ -181,7 +181,7 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url(fotos/outono.jpg) center center / cover no-repeat;
+    background: url(fotos/outono.jpg) center;
     overflow: hidden;
     padding: 60px 0 50px;
 }
@@ -374,6 +374,8 @@ a {
     .hero {
         min-height: 100vh;
         padding: 0;
+        background: url(fotos/outono.jpg) center center / cover no-repeat;
+
     }
 
     .info h2 { font-size: 70px; }
