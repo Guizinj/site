@@ -533,6 +533,7 @@ a {
 }
 
 .preco-antigo {
+    display: none;
     font-size: 13px;
     color: #999;
     text-decoration: line-through;
@@ -548,6 +549,7 @@ a {
 }
 
 .parcelas {
+    display: none;
     font-size: 11px;
     color: #666;
     letter-spacing: 0.5px;
